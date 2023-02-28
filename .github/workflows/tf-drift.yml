@@ -31,6 +31,16 @@ jobs:
       tfplanExitCode: ${{ steps.tf-plan.outputs.exitcode }}
 
     steps:
+    - name: 'Az CLI login'
+      uses: azure/login@v1.4.3
+      with:
+        client-id: ${{ secrets.CLIENT_ID }}
+        subscription-id: ${{ secrets.SUBSCRIPTION_ID }}
+        tenant-id: ${{ secrets.TENANT_ID }}
+        enable-AzPSSession: false
+        environment: azurecloud
+        audience: api://AzureADTokenExchange
+
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
