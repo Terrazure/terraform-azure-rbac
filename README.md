@@ -1,21 +1,15 @@
 <!-- BEGIN_TF_DOCS -->
-[![Terraform Unit Tests](https://github.com/PinakiKundu/terraform-azure-rbac/actions/workflows/tf-unit-tests.yml/badge.svg)](https://github.com/PinakiKundu/terraform-azure-rbac/actions/workflows/tf-unit-tests.yml)
-[![Terraform Plan/Apply](https://github.com/PinakiKundu/terraform-azure-rbac/actions/workflows/tf-plan-apply.yml/badge.svg)](https://github.com/PinakiKundu/terraform-azure-rbac/actions/workflows/tf-plan-apply.yml)
-
 
 
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.1.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3.0.1 |
+No requirements.
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 3.0.1 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
 
 ## Sample
 
@@ -24,7 +18,7 @@
 
 ```hcl
 module "role_assignment" {
-  source = "../module"
+  source = "../"
 
   role_mapping = [
     {

@@ -1,5 +1,5 @@
 module "role_assignment" {
-  source = "../module"
+  source = "../"
 
   role_mapping = [
     {
